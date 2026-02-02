@@ -700,6 +700,11 @@ int main(int argc, char* argv[])
 		//happy end
 		char s[100];
 		pk_found.GetHexStr(s);
+
+		for (int i = 0; s[i]; i++) {
+        s[i] = tolower(s[i]);
+        }
+		
 		printf("\r\nPRIVATE KEY: %s\r\n\r\n", s);
 		FILE* fp = fopen("RESULTS.TXT", "a");
 		if (fp)
@@ -761,4 +766,5 @@ label_end:
 	free(pPntList2);
 	free(pPntList);
 }
+
 
