@@ -12,7 +12,7 @@ GPU_SRC := RCGpuCore.cu
 CPP_OBJECTS := $(CPU_SRC:.cpp=.o)
 CU_OBJECTS := $(GPU_SRC:.cu=.o)
 
-TARGET := rckangaroo
+TARGET := kangaroo
 
 all: $(TARGET)
 
@@ -27,3 +27,4 @@ $(TARGET): $(CPP_OBJECTS) $(CU_OBJECTS)
 
 clean:
 	rm -f $(CPP_OBJECTS) $(CU_OBJECTS)
+
