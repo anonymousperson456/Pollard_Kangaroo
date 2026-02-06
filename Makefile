@@ -1,5 +1,5 @@
 CC := g++
-NVCC := /usr/local/bin/nvcc
+NVCC := /usr/local/cuda/bin/nvcc
 CUDA_PATH ?= /usr/local/cuda
 
 CCFLAGS := -O3 -I$(CUDA_PATH)/include
@@ -27,5 +27,6 @@ $(TARGET): $(CPP_OBJECTS) $(CU_OBJECTS)
 
 clean:
 	rm -f $(CPP_OBJECTS) $(CU_OBJECTS)
+
 
 
