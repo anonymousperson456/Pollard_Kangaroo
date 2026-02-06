@@ -27,5 +27,3 @@ $(TARGET): $(CPP_OBJECTS) $(CU_OBJECTS)
 
 clean:
 	rm -f $(CPP_OBJECTS) $(CU_OBJECTS)
-
-
