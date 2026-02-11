@@ -680,6 +680,12 @@ int main(int argc, char* argv[])
 		char sx[100], sy[100];
 		gPubKey.x.GetHexStr(sx);
 		gPubKey.y.GetHexStr(sy);
+		for (int i = 0; sx[i]; i++) {
+			sx[i] = tolower(sx[i]);
+        }
+		for (int i = 0; sy[i]; i++) {
+            sy[i] = tolower(sy[i]);
+        }
 		printf("Solving public key\r\nX: %s\r\nY: %s\r\n", sx, sy);
 		gStart.GetHexStr(sx);
 		printf("Offset: %s\r\n", sx);
@@ -766,3 +772,4 @@ label_end:
 	free(pPntList2);
 	free(pPntList);
 }
+
