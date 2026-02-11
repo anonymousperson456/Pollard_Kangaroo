@@ -464,7 +464,7 @@ bool SolvePoint(EcPoint PntToSolve, int Range, int DP, EcInt* pk_res)
 		}
 	}
 
-	printf("Stopping work ...\r\n");
+	printf("\nStopping work ...\r\n");
 	for (int i = 0; i < GpuCnt; i++)
 		GpuKangs[i]->Stop();
 	while (ThrCnt)
@@ -776,6 +776,7 @@ label_end:
 	free(pPntList2);
 	free(pPntList);
 }
+
 
 
 
