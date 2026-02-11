@@ -705,16 +705,16 @@ int main(int argc, char* argv[])
         s[i] = tolower(s[i]);
         }
 		
-		printf("\r\nPRIVATE KEY: %s\r\n\r\n", s);
-		FILE* fp = fopen("RESULTS.TXT", "a");
+		printf("\r\nPrivate Key: %s\r\n\r\n", s);
+		FILE* fp = fopen("Found.txt", "a");
 		if (fp)
 		{
-			fprintf(fp, "PRIVATE KEY: %s\n", s);
+			fprintf(fp, "Private Key: %s\n", s);
 			fclose(fp);
 		}
 		else //we cannot save the key, show error and wait forever so the key is displayed
 		{
-			printf("WARNING: Cannot save the key to RESULTS.TXT!\r\n");
+			printf("WARNING: Cannot save the key to Found.txt!\r\n");
 			while (1)
 				Sleep(100);
 		}
@@ -766,5 +766,3 @@ label_end:
 	free(pPntList2);
 	free(pPntList);
 }
-
-
