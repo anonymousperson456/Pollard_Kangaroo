@@ -688,6 +688,9 @@ int main(int argc, char* argv[])
         }
 		printf("Solving public key\r\nX: %s\r\nY: %s\r\n", sx, sy);
 		gStart.GetHexStr(sx);
+		for (int i = 0; sx[i]; i++) {
+            sx[i] = tolower(sx[i]);
+        }
 		printf("Offset: %s\r\n", sx);
 
 		if (!SolvePoint(PntToSolve, gRange, gDP, &pk_found))
@@ -772,4 +775,5 @@ label_end:
 	free(pPntList2);
 	free(pPntList);
 }
+
 
